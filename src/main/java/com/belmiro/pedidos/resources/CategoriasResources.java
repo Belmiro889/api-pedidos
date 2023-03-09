@@ -18,9 +18,7 @@ public class CategoriasResources {
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<?> listar(@PathVariable Integer id) {
-
 		Categoria cat = categoriaServices.buscar(id);
-
 		return ResponseEntity.ok().body(cat);
 	}
 }
